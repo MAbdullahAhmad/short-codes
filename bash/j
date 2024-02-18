@@ -1,0 +1,78 @@
+#!/bin/bash
+
+R="$@"
+
+# Reset
+Off='\033[0m'; R=${R//Off:/$Off} # Text Reset
+
+# High Intensty backgrounds
+On_IBlack='\033[0;100m' ; R=${R//On_IBlack:/$On_IBlack}    # Black
+On_IRed='\033[0;101m'   ; R=${R//On_IRed:/$On_IRed}        # Red
+On_IGreen='\033[0;102m' ; R=${R//On_IGreen:/$On_IGreen}    # Green
+On_IYellow='\033[0;103m'; R=${R//On_IYellow:/$On_IYellow}  # Yellow
+On_IBlue='\033[0;104m'  ; R=${R//On_IBlue:/$On_IBlue}      # Blue
+On_IPurple='\033[10;95m'; R=${R//On_IPurple:/$On_IPurple}  # Purple
+On_ICyan='\033[0;106m'  ; R=${R//On_ICyan:/$On_ICyan}      # Cyan
+On_IWhite='\033[0;107m' ; R=${R//On_IWhite:/$On_IWhite}    # White
+
+# Background
+On_Black='\033[40m' ; R=${R//On_Black:/$On_Black}   # Black
+On_Red='\033[41m'   ; R=${R//On_Red:/$On_Red}       # Red
+On_Green='\033[42m' ; R=${R//On_Green:/$On_Green}   # Green
+On_Yellow='\033[43m'; R=${R//On_Yellow:/$On_Yellow} # Yellow
+On_Blue='\033[44m'  ; R=${R//On_Blue:/$On_Blue}     # Blue
+On_Purple='\033[45m'; R=${R//On_Purple:/$On_Purple} # Purple
+On_Cyan='\033[46m'  ; R=${R//On_Cyan:/$On_Cyan}     # Cyan
+On_White='\033[47m' ; R=${R//On_White:/$On_White}   # White
+
+# Bold
+BBlack='\033[1;30m' ; R=${R//BBlack:/$BBlack}   # Black
+BRed='\033[1;31m'   ; R=${R//BRed:/$BRed}       # Red
+BGreen='\033[1;32m' ; R=${R//BGreen:/$BGreen}   # Green
+BYellow='\033[1;33m'; R=${R//BYellow:/$BYellow} # Yellow
+BBlue='\033[1;34m'  ; R=${R//BBlue:/$BBlue}     # Blue
+BPurple='\033[1;35m'; R=${R//BPurple:/$BPurple} # Purple
+BCyan='\033[1;36m'  ; R=${R//BCyan:/$BCyan}     # Cyan
+BWhite='\033[1;37m' ; R=${R//BWhite:/$BWhite}   # White
+
+# Underline
+UBlack='\033[4;30m' ; R=${R//UBlack:/$UBlack}    # Black
+URed='\033[4;31m'   ; R=${R//URed:/$URed}        # Red
+UGreen='\033[4;32m' ; R=${R//UGreen:/$UGreen}    # Green
+UYellow='\033[4;33m'; R=${R//UYellow:/$UYellow}  # Yellow
+UBlue='\033[4;34m'  ; R=${R//UBlue:/$UBlue}      # Blue
+UPurple='\033[4;35m'; R=${R//UPurple:/$UPurple}  # Purple
+UCyan='\033[4;36m'  ; R=${R//UCyan:/$UCyan}      # Cyan
+UWhite='\033[4;37m' ; R=${R//UWhite:/$UWhite}    # White
+
+# High Intensty
+IBlack='\033[0;90m' ; R=${R//IBlack:/$IBlack}   # Black
+IRed='\033[0;91m'   ; R=${R//IRed:/$IRed}       # Red
+IGreen='\033[0;92m' ; R=${R//IGreen:/$IGreen}   # Green
+IYellow='\033[0;93m'; R=${R//IYellow:/$IYellow} # Yellow
+IBlue='\033[0;94m'  ; R=${R//IBlue:/$IBlue}     # Blue
+IPurple='\033[0;95m'; R=${R//IPurple:/$IPurple} # Purple
+ICyan='\033[0;96m'  ; R=${R//ICyan:/$ICyan}     # Cyan
+IWhite='\033[0;97m' ; R=${R//IWhite:/$IWhite}   # White
+
+# Bold High Intensty
+BIBlack='\033[1;90m' ; R=${R//On_BIBlack:/$On_BIBlack}   # Black
+BIRed='\033[1;91m'   ; R=${R//On_BIRed:/$On_BIRed}       # Red
+BIGreen='\033[1;92m' ; R=${R//On_BIGreen:/$On_BIGreen}   # Green
+BIYellow='\033[1;93m'; R=${R//On_BIYellow:/$On_BIYellow} # Yellow
+BIBlue='\033[1;94m'  ; R=${R//On_BIBlue:/$On_BIBlue}     # Blue
+BIPurple='\033[1;95m'; R=${R//On_BIPurple:/$On_BIPurple} # Purple
+BICyan='\033[1;96m'  ; R=${R//On_BICyan:/$On_BICyan}     # Cyan
+BIWhite='\033[1;97m' ; R=${R//On_BIWhite:/$On_BIWhite}   # White
+
+# Regular Colors
+Black='\033[0;30m' ; R=${R//Black:/$Black}    # Black
+Red='\033[0;31m'   ; R=${R//Red:/$Red}        # Red
+Green='\033[0;32m' ; R=${R//Green:/$Green}    # Green
+Yellow='\033[0;33m'; R=${R//Yellow:/$Yellow}  # Yellow
+Blue='\033[0;34m'  ; R=${R//Blue:/$Blue}      # Blue
+Purple='\033[0;35m'; R=${R//Purple:/$Purple}  # Purple
+Cyan='\033[0;36m'  ; R=${R//Cyan:/$Cyan}      # Cyan
+White='\033[0;37m' ; R=${R//White:/$White}    # White
+
+echo -e "${R}${Off}"
